@@ -1,0 +1,53 @@
+name: ParallelDots
+description: "ParallelDots, Inc. is an artificial intelligence company developing novel algorithms and high impact solutions for real world problems. ParallelDots growing team of 35 includes 20 data scientists and engineers. ParallelDots was incubated at TLabs, India's leading technology venture accelerator."
+image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/paralleldots-logo.png
+x-kinRank: "9"
+x-alexaRank: ""
+tags:
+  - Machine Learning
+  - Artificial Intelligence
+created: "2018-03-11"
+modified: "2018-03-11"
+url: https://raw.githubusercontent.com/api-stack-providers/paralleldots/master/_listings/paralleldots/apis.yaml
+specificationVersion: "0.14"
+apis:
+- name: ParallelDots
+  description: "Our powerful Deep Learning powered APIs can comprehend a huge amount of unstructured text and visual content to empower your products."
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/paralleldots-logo.png
+  humanURL: ""
+  baseURL: https://apis.paralleldots.com//v3
+  tags:
+    - Machine Learning
+  properties:
+    - type: x-openapi-spec
+      url: http://paralleldots.stack.network/openapi/complete.yaml
+    - type: x-postman-collection
+      url: http://paralleldots.stack.network/postmancollections/complete.json
+x-common:
+  - type: x-blog
+    url: https://blog.paralleldots.com/
+  - type: x-developer
+    url: https://www.paralleldots.com/ai-apis
+  - type: x-documentation
+    url: https://docs.paralleldots.com/
+  - type: x-faq
+    url: https://www.paralleldots.com/frequently-asked-questions
+  - type: x-github
+    url: https://github.com/ParallelDots
+  - type: x-linkedin
+    url: https://www.linkedin.com/company/3572541/
+  - type: x-openapi-gist
+    url: https://gist.githubusercontent.com/kinlane/18095af6f37b04ffada94a3378ad9e8b/raw/8ce934fcf5ac1be679873ad12df8ed00b7c750e6/paralleldots-ai-api-openapi.json
+  - type: x-pricing
+    url: https://www.paralleldots.com/pricing
+  - type: x-terms-of-service
+    url: https://www.paralleldots.com/terms-and-conditions
+  - type: x-twitter
+    url: https://twitter.com/ParallelDots
+  - type: x-website
+    url: https://www.paralleldots.com/
+include: []
+maintainers:
+  - FN: Kin Lane
+    x-twitter: apievangelist
+    email: info@apievangelist.com
