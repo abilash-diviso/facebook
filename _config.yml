@@ -1,0 +1,25 @@
+name: Facebook
+url: http://facebook.stack.network/
+
+author:
+  name: 'Kin Lane'
+  email: 'info@apievangelist.com'
+markdown: kramdown
+
+permalink: /:categories/:year/:month/:day/:title/
+exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", ".DS_Store"]
+
+github_org: api-stack-providers
+github_repo: teamplate
+
+# URL to the issues page for this
+support_title: Support
+support_description: If you need any help, have questions, or would like to get involved, please use the following links.
+support_email: info@apievangelist.com
+support_twitter: apievangelist
+
+# Footer
+footer_title: API Evangelist
+footer_link: http://apievangelist.com
+footer_image_source: https://s3.amazonaws.com/kinlane-productions/footer/empowered-by-you-banner.png
+footer_image_width: 60
