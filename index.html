@@ -1,0 +1,78 @@
+---
+layout: page
+---
+
+<!-- Banner -->
+<section id="banner">
+	<div class="content">
+		<header>
+			<h2>{{ site.name }} API Definitions</h2>
+		</header>
+    <p align="right"><img src="https://s3.amazonaws.com/kinlane-productions/kin-lane/kin-lane-cartoon-questioning.png" alt="Kin Lane" width="22%" align="right" /></p>
+    <p>My name is Kin Lane, this is my online domain where I work to understand the world of the
+    Application Programming Interfaces, also known as APIs. This new way of
+    sharing data using the web is touching almost every aspect of our
+    increasingly digital lives, providing access to the bits and bytes that make
+    our personal and professional worlds go round.</p>
+    <p>This is my work to profile the {{ site.name }}, and generate machine readable definitions for the APis using APIs.json, OpenAPI, and Postman Collections. Making the APIs provided by {{ site.name }}, much more discoverable, and usable beyond just their API portal.</p>
+    <p>API Evangelist is a network of data driven projects and APIs which I
+    curate and manage as part of this ongoing research, hoping to provide easy
+    access to the moving parts of my work. Everything you see here runs on
+    Github, making everything forkable, and resuable for both humans and
+    machines.</p>
+	</div>
+</section>
+
+<section id="banner">
+	<div class="content">
+		<header>
+			<h2>API Definitions</h2>
+		</header>
+		<p>These are the definitions I am managing as part of this project, to make the {{ site.name }} more discoverable and usable, and able to be used in other 3rd party services and tooling.</p>
+		<table cellpadding="10" cellspacing="10" width="100%">
+			<tr style="border: 1px solid #FFF;">
+
+				<td align="center" valign="top" style="background-color:#FFF;">
+					<a href="{{ site.url }}/apis.yaml"><img src="https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png" width="85" align="center"></a><br />
+					<a href="{{ site.url }}/apis.yaml">APIs.json</a>
+				</td>
+
+				<td align="center" valign="top" style="background-color:#FFF;">
+					<a href="{{ site.url }}/openapi/complete.yaml"><img src="https://s3.amazonaws.com/kinlane-productions/openapi/openapi-logo.png" width="75" align="center"></a><br />
+					<a href="{{ site.url }}/openapi/complete.yaml">OpenAPI</a>
+				</td>
+
+				<td align="center" valign="top" style="background-color:#FFF;">
+					<a href="{{ site.url }}/postmancollections/complete.json"><img src="https://s3.amazonaws.com/kinlane-productions/postman/postman-icon.png" width="75" align="center"></a><br />
+					<a href="{{ site.url }}/postmancollections/complete.json">Email</a>
+				</td>
+
+			</tr>
+		</table>
+		<p>The definitions are available in the <a href="https://github.com/{{ site.github_org }}/{{ site.github_repo }}" target="_blank">Github repository for this project</a>, and I welcome your updates and pull requests to help move the project forward.</p>
+	</div>
+</section>
+
+<!-- Full -->
+<section>
+	<header>
+		<a name="Documentation"></a>
+		<h2>Details</h2>
+	</header>
+
+  {% include org-listings.html %}
+
+</section>
+
+<!-- About This Research -->
+<a name="About"></a>
+<section id="banner">
+	<div class="content">
+		<header>
+			<h2>About This Project</h2>
+		</header>
+    <p><img src="/blueprint-square.png" alt="" width="25%" align="right" /></p>
+		<p>This project is part of a larger efort to make APIs more discoverable and usable by making sure there are machine readable definitions available for the entire surface area of the API, and it's supporting operations.</p>
+    <p>If you'd like to get involved you can visit <a href="https://github.com/{{ site.github_org }}/{{ site.github_repo }}" target="_blank">the Github repository behind this project</a>, and participate by submitting pull requests, and issues for the project, contributing to the definitions it contains.</p>
+	</div>
+</section>
