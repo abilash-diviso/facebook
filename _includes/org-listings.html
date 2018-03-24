@@ -18,9 +18,10 @@
       <p><a href="/{{ tag_slug }}/{{ api_slug }}/apis/"><img src="{{ api_image }}" class="taggedLinkCard__image" alt="" align="left" width="150" style="padding: 15px;"></a></p>
       <p class="taggedLinkCard__body">{{ api_description }}</p>
 
+      <h3>Links</h3>
       <ul>
       {% for common in entry.x-common %}
-        <li><a href="{{ common.url }}">[{{ common.type | replace: 'x-','' | replace: '-',' ' |  capitalize }}]({{ common.url }})</a></li>
+        <li><a href="{{ common.url }}">{{ common.type | replace: 'x-','' | replace: '-',' ' |  capitalize }}</a></li>
       {% endfor %}
       </ul>
 
