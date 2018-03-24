@@ -18,6 +18,12 @@
       <p><a href="/{{ tag_slug }}/{{ api_slug }}/apis/"><img src="{{ api_image }}" class="taggedLinkCard__image" alt="" align="left" width="150" style="padding: 15px;"></a></p>
       <p class="taggedLinkCard__body">{{ api_description }}</p>
 
+      <ul>
+      {% for common in entry.x-common %}
+        <li><a href="{{ common.url }}">[{{ common.type | replace: 'x-','' | replace: '-',' ' |  capitalize }}]({{ common.url }})</a></li>
+      {% endfor %}
+      </ul>
+
       <!-- See how many paths we have-->
       {% assign path_count = 0 %}
       {% for item in site.listings %}
