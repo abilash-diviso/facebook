@@ -1,1 +1,70 @@
-[need something]
+
+{% for entry in listing_object %}
+  {% if entry.name %}
+
+      {% assign api_name = entry.name %}
+      {% assign api_slug = api_name | replace: ' ','-' | replace: '/','' | replace: '&','-' | replace: '=','-' | replace: '{','-' | replace: '}','-' | replace: '?','-' | replace: '_','-' | replace: '--','-' | downcase %}
+      {% assign api_description = entry.description %}
+      {% assign api_image = entry.image %}
+      {% assign api_json_url = entry.url %}
+      {% assign api_json_kin_rank = entry.x-kinRank %}
+      {% assign api_json_alexa_rank = entry.x-alexaRank %}
+
+      <header>
+    		<a name="Documentation"></a>
+    		<h2>{{ api_name }}</h2>
+    	</header>
+
+      <p><a href="/{{ tag_slug }}/{{ api_slug }}/apis/"><img src="{{ api_image }}" class="taggedLinkCard__image" alt="" align="left" width="150" style="padding: 15px;"></a></p>
+      <p class="taggedLinkCard__body">{{ api_description }}</p>
+
+      <!-- See how many paths we have-->
+      {% assign path_count = 0 %}
+      {% for item in site.listings %}
+        {% if item.swagger %}
+          {% if item.swagger == "2.0" %}
+              {% for path in item.paths %}
+                {% assign path_count = path_count | plus: 1 %}
+              {% endfor %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% if path_count > 0 %}
+        <h3>API Paths</h3>
+        <table border="0">
+        {% for item in site.listings %}
+          {% if item.swagger %}
+            {% if item.swagger == "2.0" %}
+              {% for path in item.paths %}
+
+                {% assign path_name = path[0] %}
+                {% assign api_path_slug = path_name | lstrip | rstrip | remove_first: "/" | replace: '{','' | replace: '}','' | replace: ' ','-' | replace: '/','-' | replace: '&','-' | replace: ':','' | replace: '.','-' | replace: '=','-' | replace: '?','-' | replace: '_','-' | replace: '---','-' | replace: '--','-' | downcase %}
+                {% for method in path[1] %}
+
+                  {% assign method_details = method[1] %}
+                  {% assign verb = method[0] %}
+                  {% assign api_path_slug = api_path_slug | append: '-' | append: verb | replace: '_','-' | replace: '---','-' | replace: '--','-' | downcase %}
+                  {% assign api_path_summary = method_details.summary %}
+                  {% assign api_path_description = method_details.description %}
+                  {% assign api_path_parameters = method_details.parameters %}
+                  {% assign api_path_tags = method_details.tags %}
+
+                  <tr>
+                    <td width="5%" align="center">&rarr;</td>
+                    <td>{{ api_path_summary }}</td>
+                    <td width="8%" align="center">({{ verb | upcase }})</td>
+                    <td>{{ path_name }}</td>
+                    <td><a href="https://raw.githubusercontent.com/{{ site.github_user }}/{{ site.github_repo }}/master/_listings/{{ api_slug }}/{{ api_path_slug }}.md" target="_blank">OpenAPI</a></td>
+                  </tr>
+
+                {% endfor %}
+              {% endfor %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </table>
+      {% endif %}
+
+  {% endif %}
+{% endfor %}
