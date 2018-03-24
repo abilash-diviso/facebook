@@ -6,7 +6,7 @@ layout: page
 <section id="banner">
 	<div class="content">
 		<header>
-			<h2>{{ site.name }} API Definitions</h2>
+			<h2>{{ site.title }} API Definitions</h2>
 		</header>
     <p align="right"><img src="https://s3.amazonaws.com/kinlane-productions/kin-lane/kin-lane-cartoon-questioning.png" alt="Kin Lane" width="22%" align="right" /></p>
     <p>My name is Kin Lane, this is my online domain where I work to understand the world of the
@@ -14,7 +14,7 @@ layout: page
     sharing data using the web is touching almost every aspect of our
     increasingly digital lives, providing access to the bits and bytes that make
     our personal and professional worlds go round.</p>
-    <p>This is my work to profile the {{ site.name }}, and generate machine readable definitions for the APis using APIs.json, OpenAPI, and Postman Collections. Making the APIs provided by {{ site.name }}, much more discoverable, and usable beyond just their API portal.</p>
+    <p>This is my work to profile the {{ site.title }}, and generate machine readable definitions for the APis using APIs.json, OpenAPI, and Postman Collections. Making the APIs provided by {{ site.title }}, much more discoverable, and usable beyond just their API portal.</p>
     <p>API Evangelist is a network of data driven projects and APIs which I
     curate and manage as part of this ongoing research, hoping to provide easy
     access to the moving parts of my work. Everything you see here runs on
@@ -28,37 +28,37 @@ layout: page
 		<header>
 			<h2>API Definitions</h2>
 		</header>
-		<p>These are the definitions I am managing as part of this project, to make the {{ site.name }} more discoverable and usable, and able to be used in other 3rd party services and tooling.</p>
+		<p>These are the definitions I am managing as part of this project, to make the {{ site.title }} more discoverable and usable, and able to be used in other 3rd party services and tooling.</p>
 		<table cellpadding="10" cellspacing="10" width="100%">
 			<tr style="border: 1px solid #FFF;">
 
 				<td align="center" valign="top" style="background-color:#FFF;">
-					<a href="{{ site.url }}/apis.yaml"><img src="https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png" width="85" align="center"></a><br />
-					<a href="{{ site.url }}/apis.yaml">APIs.json</a>
+					<a href="https://raw.githubusercontent.com/{{ site.github_user }}/{{ site.github_repo }}/master/_apisjson/complete.yaml"><img src="https://s3.amazonaws.com/kinlane-productions/api-commons/api-commons-icon.png" width="85" align="center"></a><br />
+					<a href="https://raw.githubusercontent.com/{{ site.github_user }}/{{ site.github_repo }}/master/_apisjson/complete.yaml">APIs.json</a>
 				</td>
 
 				<td align="center" valign="top" style="background-color:#FFF;">
-					<a href="{{ site.url }}/openapi/complete.yaml"><img src="https://s3.amazonaws.com/kinlane-productions/openapi/openapi-logo.png" width="75" align="center"></a><br />
-					<a href="{{ site.url }}/openapi/complete.yaml">OpenAPI</a>
+					<a href="https://raw.githubusercontent.com/{{ site.github_user }}/{{ site.github_repo }}/master/_openapi/complete.yaml"><img src="https://s3.amazonaws.com/kinlane-productions/openapi/openapi-logo.png" width="75" align="center"></a><br />
+					<a href="https://raw.githubusercontent.com/{{ site.github_user }}/{{ site.github_repo }}/master/_openapi/complete.yaml">OpenAPI</a>
 				</td>
 
 				<td align="center" valign="top" style="background-color:#FFF;">
-					<a href="{{ site.url }}/postmancollections/complete.json"><img src="https://s3.amazonaws.com/kinlane-productions/postman/postman-icon.png" width="75" align="center"></a><br />
-					<a href="{{ site.url }}/postmancollections/complete.json">Email</a>
+					<a href="alert('coming soon');"><img src="https://s3.amazonaws.com/kinlane-productions/postman/postman-icon.png" width="75" align="center"></a><br />
+					<a href="alert('coming soon');">Postman</a>
 				</td>
 
 			</tr>
 		</table>
-		<p>The definitions are available in the <a href="https://github.com/{{ site.github_org }}/{{ site.github_repo }}" target="_blank">Github repository for this project</a>, and I welcome your updates and pull requests to help move the project forward.</p>
+		<p>The definitions are available in the <a href="https://github.com/{{ site.github_user }}/{{ site.github_repo }}" target="_blank">Github repository for this project</a>, and I welcome your updates and pull requests to help move the project forward.</p>
 	</div>
 </section>
 
 <!-- Full -->
 <section>
-	<header>
-		<a name="Documentation"></a>
-		<h2>Details</h2>
-	</header>
+
+	{% assign listing_object = site.listings %}
+	{% assign tag_slug = "listings" %}
+	{% assign listing_type = "organization" %}
 
   {% include org-listings.html %}
 
